@@ -22,4 +22,25 @@ Para saber quais features são mais relevantes, aplicarei o algoritmo Feature Im
 Eu realizei um plot (ver poi_id.ipynb) para ver quais features possuíam outliers, e a análise mostrou que a maioria dos outliers vinham da "pessoa" TOTAL, removi ela, porque não é relevante. Também removi THE TRAVEL AGENCY IN THE PARK e LOCKHART EUGENE E.
 
 ### Criação de features
-Criei duas features que ao meu ver fazem sentido: fraction_from_poi, que a procentagem de mensagem recebidas de um POI; e fraction_to_poi que a porcentagem de mensagens enviadas para um POI. Para não ficar reduntande descartarei as features to_messages e from_messages, já que as informações relavantes estão nas features criadas.
+Criei duas features que ao meu ver fazem sentido: fraction_from_poi, que a procentagem de mensagem recebidas de um POI; e fraction_to_poi que a porcentagem de mensagens enviadas para um POI. Para não ficar reduntande descartarei as features to_messages e from_messages, já que as informações relavantes estão nas features criadas. Lista final das features: **poi, salary, total_payments, exercised_stock_options, shared_receipt_with_poi, total_stock_value, expenses, deferred_income, from_this_person_to_poi, from_poi_to_this_person, fraction_from_poi e fraction_to_poi**.
+
+## Machine Learning
+
+### Testando alguns Classificadores
+Eu testei 4 classificadores (esses resultados já são as saídas do test_classifier()):
+
+SVM  -                Accuracy: 0.87473       Precision: 0.0          Recall: 0.0
+Decision Tree -       Accuracy: 0.82487       Precision: 0.34062      Recall: 0.33500
+Naive Bayes -         Accuracy: 0.85447       Precision: 0.43677      Recall: 0.31600
+Linear Discriminant - Accuracy: 0.84607       Precision: 0.36291      Recall: 0.20450
+
+Dois algoritmo apresentaram resultados bons em termos de Precision e Recall, Naive Bayes e Decision Tree. O algoritmo escolhido para as próximas etapas foi o Naive Bayes.
+
+### Tunning meu classificador e Validação
+Eu executei várias vezes meu algoritmo e usei sklearn.metrics para analisar os resultados. O algoritmo também foi testando usando o test_classifier() para validar os resultados. Como foi mostrado acima o Naive Bayes foi o melhor deles.Tunning o algoritmo é muito importante para evitar o overfit do aloritmo.
+
+### Métricas utilizadas
+As métricas utilizadas foram Precision e Recall, elas foram escolhidas porque o conjunto de dados é pequeno e por isso a acurácia não é uma boa medida. Precision é tp/(tp+fp), onde tp é true positives e fp é false positives. Já recall é tp/(tp+fn), onde fn é false negatives.
+
+
+
