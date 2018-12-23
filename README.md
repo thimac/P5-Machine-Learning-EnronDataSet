@@ -7,10 +7,10 @@ O objetivo desse projeto é usar técnicas de aprendizagem de máquina (machine 
 
 ### Conjunto de dados
 O conjunto de dados possui 146 pessoas e 21 features. Essas features podem ser divididas em 3 categorias: financeira (ex. salary, total_payments, bonus), relacionadas ao email (ex. to_messages, from_messages, email_address) e POIs (que é um feature booleana).
-Para entender melhor, abaixo  alguns dados relevantes:
-Quantidade de Pessoas:  146
-Quantidade de Features:  21
-Quantidade de POIs: 18 ou aproximandamente 18%
+Para entender melhor, abaixo  alguns dados relevantes:<br/>
+Quantidade de Pessoas:  146<br/>
+Quantidade de Features:  21<br/>
+Quantidade de POIs: 18 ou aproximandamente 18%<br/>
 Quatindade de não POIs: 128
 
 ### Seleção de features
