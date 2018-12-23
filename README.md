@@ -14,9 +14,9 @@ Quantidade de POIs: 18 ou aproximandamente 18%<br/>
 Quatindade de não POIs: 128
 
 ### Seleção de features
-A quanditade de NaN para a maioria das Features é bastante alto. Como forma de fazer uma seleção prévia das features relevantes, irei desconsiderar todas que possuem acima de 50% (deferral_payments, restricted_stock_deferred, loan_advances, director_fees, deferred_income long_term_incentive) de NaN, e o email que não me parece ser relevante para análise.
+A quanditade de NaN para a maioria das Features é bastante alto. Como forma de fazer uma seleção prévia das features relevantes, iremos desconsiderar todas que possuem acima de 75% de NaN (director_fees, loan_advances, restricted_stock_deferred), e o email que não me parece ser relevante para análise.
 
-Para saber quais features são mais relevantes, apliquei o Recursive Feature Elimination. O mesmo selecionou recursivamente as 10 melhores features, todas as features relacionadas ao finaceiro, como exercised_stock_options e total_stock_value. Usarei as features selecionadas pelo algoritmo e depois criarei duas mais usando algumas feature não selecionadas, a to_messages e a from_messages. Lista de features selecionadas: poi, salary, total_payments, exercised_stock_options, shared_receipt_with_poi, total_stock_value, expenses, from_messages, deferred_income, from_this_person_to_poi, from_poi_to_this_person.
+Para saber quais features são mais relevantes, apliquei o método Recursive Feature Elimination (RFE). selecionou recursivamente as 8 melhores features, todas as features relacionadas ao finaceiro, como exercised_stock_options e total_stock_value. Usarei algumas features selecionadas pelo algoritmo e depois criarei mais usando algumas feature não selecionadas, a to_messages e a from_messages. Lista de features selecionadas: poi, salary, total_payments, exercised_stock_options, shared_receipt_with_poi, total_stock_value, expenses, from_messages, deferred_income, from_this_person_to_poi, from_poi_to_this_person.
 
 ### Análise e remoção de outliers
 Eu realizei um plot (ver poi_id.ipynb) para ver quais features possuíam outliers, e a análise mostrou que a maioria dos outliers vinham da "pessoa" TOTAL, removi ela, porque não é relevante. Também removi THE TRAVEL AGENCY IN THE PARK e LOCKHART EUGENE E.
