@@ -27,47 +27,47 @@ Criei duas features que ao meu ver fazem sentido: fraction_from_poi, que a proce
 ## Machine Learning
 
 ### Testando alguns Classificadores
-Eu testei 4 classificadores:
--------- Logistic Regression ----------
-Recall score:  0.11500000000000002
-Precision score:  0.05024132730015083
-Accuracy score:  0.6333333333333333
+Eu testei 4 classificadores:<br/>
+-------- Logistic Regression ----------<br/>
+Recall score:  0.11500000000000002<br/>
+Precision score:  0.05024132730015083<br/>
+Accuracy score:  0.6333333333333333<br/>
 
--------- Decision Tree ----------------
-Recall score:  0.28869047619047616
-Precision score:  0.43999999999999995
-Accuracy score:  0.8583333333333332
+-------- Decision Tree ----------------<br/>
+Recall score:  0.28869047619047616<br/>
+Precision score:  0.43999999999999995<br/>
+Accuracy score:  0.8583333333333332<br/>
 
--------- Naive Bayes ----------
-Recall score:  0.2710714285714286
-Precision score:  0.44000000000000006
-Accuracy score:  0.8520833333333334
+-------- Naive Bayes ------------------<br/>
+Recall score:  0.2710714285714286<br/>
+Precision score:  0.44000000000000006<br/>
+Accuracy score:  0.8520833333333334<br/>
 
--------- Linear Discriminant ----------
-Recall score:  0.1713492063492063
-Precision score:  0.4600000000000001
-Accuracy score:  0.8541666666666666
+-------- Linear Discriminant ----------<br/>
+Recall score:  0.1713492063492063<br/>
+Precision score:  0.4600000000000001<br/>
+Accuracy score:  0.8541666666666666<br/>
 
 Dois algoritmo apresentaram resultados bons em termos de Precision e Recall, Naive Bayes e Decision Tree. O algoritmo escolhido para as próximas etapas foi o Naive Bayes.
 
-Foram feitos testes antes e depois de adicionar as features também, e os testes mostraram que a adição das features deram uma ligeira melhora no recall:
--------- NB with new features ----------
-Recall score:  0.3271825396825397
-Precision score:  0.3938095238095238
-Accuracy score:  0.8541666666666667
+Foram feitos testes antes e depois de adicionar as features também, e os testes mostraram que a adição das features deram uma ligeira melhora no recall:<br/>
+-------- NB with new features ----------<br/>
+Recall score:  0.3271825396825397<br/>
+Precision score:  0.3938095238095238<br/>
+Accuracy score:  0.8541666666666667<br/>
 
--------- NB without new features ----------
-Recall score:  0.2710714285714286
-Precision score:  0.44000000000000006
-Accuracy score:  0.8520833333333334
+-------- NB without new features ----------<br/>
+Recall score:  0.2710714285714286<br/>
+Precision score:  0.44000000000000006<br/>
+Accuracy score:  0.8520833333333334<br/>
 
 
 ### Afinamento do classificador e Validação
-Eu fiz o afinamento do meu algoritmo utilizando o GridSearchCV() juntamente com a função test_class() que criei para realizar os testes no modelo. O algoritmo também foi testando usando o test_classifier() para validar os resultados. Como foi mostrado acima o Naive Bayes foi o melhor deles. Depois do afinamento esses foram os resultados:
--------- Tunning Naive Bayes ----------
-Recall score:  0.32884311091207646
-Precision score:  0.4369540229885057
-Accuracy score:  0.8591954022988506
+Eu fiz o afinamento do meu algoritmo utilizando o GridSearchCV() juntamente com a função test_class() que criei para realizar os testes no modelo. O algoritmo também foi testando usando o test_classifier() para validar os resultados. Como foi mostrado acima o Naive Bayes foi o melhor deles. Depois do afinamento esses foram os resultados:<br/>
+-------- Tunning Naive Bayes ----------<br/>
+Recall score:  0.32884311091207646<br/>
+Precision score:  0.4369540229885057<br/>
+Accuracy score:  0.8591954022988506<br/>
 
 O afinamento do algoritmo é necessário porque ele testa diversos parâmetros e encontra o melhor que se encaixa no modelo.
 
